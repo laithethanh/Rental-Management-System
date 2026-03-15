@@ -63,22 +63,8 @@
 * Ghi lại mọi thao tác quan trọng trong hệ thống.
 * Hỗ trợ việc theo dõi, kiểm tra và tăng tính bảo mật.
 
-## 🗂 Cấu trúc database chính (MySQL)
-* Hệ thống gồm các bảng:
-* users – Người dùng (admin, landlord, tenant)
-* houses – Dãy trọ
-* rooms – Phòng trọ
-* rental_requests – Yêu cầu thuê phòng
-* contracts – Hợp đồng
-* electric_water – Chỉ số điện nước
-* price_table – Bảng giá điện nước
-* bills – Hóa đơn
-* payments – Thanh toán
-* deposits – Tiền cọc
-* notifications – Thông báo
-* activity_logs – Nhật ký hoạt động
-
 ## 🛠 Công nghệ sử dụng
+* **React.JS**
 * **Node.js, ExpressJS**
 * **Sequelize ORM**
 * **MySQL**
