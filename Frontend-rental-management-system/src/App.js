@@ -5,6 +5,8 @@ import Login from "./pages/Login/Login";
 import TenantLayout from "./components/layout/Tenant/TenantLayout";
 import Profile from "./pages/Profile/Profile";
 import Register from "./pages/Register/Register";
+import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
+import UpdatePassword from "./pages/UpdatePassword/UpdatePassword";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Routes>
         <Route path="/auth/login" element={<Login />} />
         <Route path="/auth/register" element={<Register />} />
+        <Route path="/auth/forgot-password" element={<ForgotPassword />} />
+        <Route path="/auth/update-password" element={<UpdatePassword />} />
 
         <Route path="/" element={<TenantLayout />}>
           <Route index element={<HomePage />} />
