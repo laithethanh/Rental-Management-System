@@ -16,6 +16,17 @@ CREATE TABLE users (
     updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
+-- Bảng lưu yêu cầu nâng cấp
+CREATE TABLE UpgradeRequests (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    userId INT,
+    idCardNumber VARCHAR(20),
+    reason TEXT, -- "Tôi là chủ dãy trọ gồm 10 phòng tại địa chỉ 123 đường ABC, Quận 10. Tôi muốn sử dụng phần mềm để quản lý hóa đơn cho khách."
+    status ENUM('pending', 'approved', 'rejected') DEFAULT 'pending',
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (userId) REFERENCES Users(id)
+);
+
 -- 2. Bảng App Settings (Cấu hình hệ thống)
 CREATE TABLE app_settings (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -243,3 +254,5 @@ CREATE TABLE activity_logs (
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (userId) REFERENCES users(id) ON DELETE SET NULL
 );
+
+-- Bảng thu phí sử dụng trang web
